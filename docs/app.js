@@ -28,7 +28,7 @@ class toc {
             // Container as dialog for accessibility
             let container = document.createElement('div');
             container.id = containerId;
-            container.role = 'dialog';
+            container.setAttribute('role', 'dialog');
             container.setAttribute('aria-labelledby', containerHeadingId);
             container.setAttribute('tabindex', '-1');
             
@@ -44,7 +44,7 @@ class toc {
             let closeButton = document.createElement('button');
             closeButton.type = 'button';
             closeButton.textContent = 'x';
-            closeButton.ariaLabel = 'Close ToC';
+            closeButton.setAttribute('aria-label', 'Close ToC');
             // It would be nice to return focus to the trigger
             // But you can’t return to browser chrome buttons…
             closeButton.addEventListener('click', () => container.remove());
@@ -78,7 +78,7 @@ class toc {
             let labelText = document.createTextNode('Hide hidden headings');
             let checkbox = document.createElement('input');
             checkbox.setAttribute('type', 'checkbox');
-            checkbox.role = 'switch';
+            checkbox.setAttribute('role', 'switch');
             checkbox.checked = hideHidden;
             checkbox.addEventListener('change', settingsChange);
             label.appendChild(checkbox);
@@ -109,7 +109,7 @@ class toc {
             headings.forEach(heading => getHeadingInfo(heading));
             
             function getHeadingInfo(heading) {
-                let role = heading.role;
+                let role = heading.getAttribute('role');
                 let text = heading.textContent.trim();
                 let nodeName = heading.nodeName;
                 let level, type, id;
@@ -124,7 +124,7 @@ class toc {
 
                 if (role === 'heading') {
                     type = 'ARIA';
-                    level = heading.ariaLevel;
+                    level = heading.getAttribute('aria-level');
                 }
                 
                 if (heading.id) {
