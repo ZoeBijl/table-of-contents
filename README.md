@@ -17,10 +17,14 @@ In 2016 Marijke Luttekes wrote a bookmarklet that prints the document outline of
 
 ## Todo
 
-- Add demo to repo
+- ~Add demo to repo~
 - Automate minification
 - General optimisation
 - Turn into browser extension
+
+## Known issues
+
+- Each time you activate a <style> element is added
 
 ## Related Links
 
