@@ -174,7 +174,7 @@ if (headings.length && tocActivated === false) {
     
     // Place button on “correct” side for Mac users
     let mac = navigator.appVersion.indexOf('Mac') != -1 ? true : false;
-    let macButton = mac ? 'grid-area: macButton;' : null;
+    let macButton = mac ? 'grid-area: macButton;' : '';
 
     styles.innerText = 
         `#${containerId} {
@@ -190,7 +190,7 @@ if (headings.length && tocActivated === false) {
             border: .0625em solid rgba(0,0,0,.3);
             border-radius: .25em;
             box-shadow: 0 .25em .5em rgba(0,0,0,.3);
-            overflow-y: scroll;
+            overflow-y: auto;
             color: black;
             font-family: sans-serif;
             font-size: max(1em, 16px);
