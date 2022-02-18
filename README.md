@@ -20,6 +20,7 @@ In 2016 Marijke Luttekes wrote a bookmarklet that prints the document outline of
 - Add demo to repo
 - Automate minification
 - General optimisation
+- Turn into browser extension
 
 ## Related Links
 
